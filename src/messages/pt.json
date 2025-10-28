@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "welcome": "Olá, tudo bem? Bem-vindo ao meu portfólio web",
+    "title": "Eu sou Vitorio A. Cavalheiro",
+    "subtitle": "Desenvolvedor Full Stack",
+    "description": "Crio experiências web incríveis com tecnologias modernas.",
+    "cta": "Venha me conhecer"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor Full Stack & Engenheiro de Dados\n\nConstruindo sistemas escaláveis que conectam código, dados e impacto no mundo real.\n\nEspecializo-me em NestJS (Node.js) e Next.js, desenvolvendo APIs modulares e aplicações full-stack com foco em performance, segurança e arquitetura limpa.\n\nHabilidoso em pipelines ETL Python, projeto e automatizo fluxos de trabalho de dados que transformam e integram conjuntos de dados complexos — apoiando analytics, automação e tomada de decisão.\n\nExperiente com PostgreSQL e MongoDB, e continuamente explorando AWS e arquiteturas de microsserviços para construir soluções eficientes, escaláveis e confiáveis.\n\nApaixonado por transformar desafios técnicos em sistemas que entregam resultados mensuráveis.",
+    "certifications": {
+      "title": "Certificações & Educação",
+      "items": [
+        {
+          "name": "Security and Privacy by Design Foundations",
+          "issuer": "IBM",
+          "date": "abr de 2024",
+          "skills": "Python, Sistemas operacionais, Rede de computadores"
+        },
+        {
+          "name": "Docker Essentials: A Developer Introduction",
+          "issuer": "IBM",
+          "date": "out de 2022",
+          "skills": "Docker, Python"
+        },
+        {
+          "name": "Basic Principles of Design",
+          "issuer": "IBM",
+          "date": "ago de 2021",
+          "skills": "Python"
+        },
+        {
+          "name": "Segurança Cibernética Fundamental",
+          "issuer": "Senac AM",
+          "date": "set de 2021",
+          "skills": "Sistemas operacionais, Rede de computadores"
+        },
+        {
+          "name": "Administração",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "jan de 2018",
+          "skills": ""
+        },
+        {
+          "name": "Montagem e Manutenção de Notebooks",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "jul de 2018",
+          "skills": "Sistemas operacionais, Rede de computadores"
+        },
+        {
+          "name": "Montagem e Manutenção de Micros",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "jan de 2017",
+          "skills": "Rede de computadores"
+        },
+        {
+          "name": "Design Gráfico",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "jan de 2016",
+          "skills": ""
+        },
+        {
+          "name": "Informática Básica II",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "jan de 2015",
+          "skills": "Sistemas operacionais"
+        }
+      ]
+    },
+    "education": {
+      "title": "Formação Acadêmica",
+      "items": [
+        {
+          "degree": "Curso Superior de Tecnologia, Análise e Desenvolvimento de Sistemas",
+          "institution": "Anhanguera Educacional",
+          "period": "fev de 2025 - jul de 2027",
+          "skills": "Python, Redes de computadores e mais 4 competências"
+        },
+        {
+          "degree": "Curso Técnico Integrado, Técnico em Desenvolvimento de Sistemas",
+          "institution": "ETEC Polivalente Americana",
+          "period": "2019 - 2021",
+          "skills": ""
+        }
+      ]
+    }
+  },
+  "experience": {
+    "title": "Experiência",
+    "description": "Minha jornada profissional e funções principais.",
+    "items": {
+      "0": {
+        "title": "Desenvolvedor Full-stack",
+        "company": "DMX Design e Desenvolvimento",
+        "period": "ago de 2025 - o momento · 3 meses",
+        "location": "Americana, São Paulo, Brasil · Híbrida",
+        "description": "Desenvolvedor Full Stack na DMX Design, trabalhando em projetos construídos com NestJS (Node.js) e React, aplicando melhores práticas em arquitetura, segurança e performance. Responsável por colaborar com clientes durante todas as fases de desenvolvimento, realizando revisões técnicas e funcionais para garantir qualidade e entrega contínua de valor. Também com experiência em engenharia de dados, focando em processos ETL em Python, automação de pipelines e integração de dados socioeconômicos utilizados em análises territoriais e projetos de planejamento estratégico, incluindo iniciativas relacionadas à COP30.",
+        "skills": "ETL (Extração, transformação e carregamento), Python e mais 7 competências"
+      },
+      "1": {
+        "title": "Desenvolvedor de Aplicações",
+        "company": "IBM",
+        "period": "jan de 2024 - set de 2024 · 9 meses",
+        "location": "Hortolândia, São Paulo, Brasil · Híbrida",
+        "description": "Atualmente faço parte da equipe responsável pelo desenvolvimento e manutenção do ECR, um repositório global de contratos amplamente adotado dentro da empresa. No meu dia a dia, trabalho no desenvolvimento de novas funcionalidades e resolução de bugs em uma aplicação web construída com Angular. Além disso, estou envolvido na criação e manutenção de microsserviços usando Python e Node.js, garantindo a entrega de código de alta qualidade através de revisões constantes. Stack e ferramentas: - Frontend: Angular, JavaScript - Backend: Node.js/Express, Python/Flask - Testes: Automação com Selenium, testes manuais - Banco de dados: MongoDB, SQL - DevOps e Infraestrutura: Docker/Podman, Kubernetes, RedHat OpenShift - Controle de versão: Git, GitHub",
+        "skills": "Python, Selenium e mais 14 competências"
+      },
+      "2": {
+        "title": "Estagiário",
+        "company": "IBM",
+        "period": "jun de 2022 - jan de 2024 · 1 ano 8 meses",
+        "location": "Hortolândia, São Paulo, Brasil",
+        "description": "Atualmente sou estagiário na equipe que desenvolve e mantém o ECR, um repositório global de contratos usado em toda a empresa. Ajudo no desenvolvimento de novas funcionalidades e correção de bugs em uma aplicação web construída com Angular. Também auxilio na criação e manutenção de microsserviços usando Python e Node.js, focando na entrega de código de alta qualidade através de revisões regulares. Stack e ferramentas: - Frontend: Angular, JavaScript - Backend: Node.js, Python/Flask - Testes: Automação com Selenium, testes manuais - Banco de dados: MongoDB, SQL - DevOps e Infraestrutura: Docker/Podman, Kubernetes, RedHat OpenShift - Controle de versão: Git, GitHub",
+        "skills": ""
+      }
+    }
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "description": "Aqui estão alguns dos projetos em que trabalhei."
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Vamos trabalhar juntos no seu próximo projeto."
+  }
+}

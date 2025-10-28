@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "welcome": "Hello, how are you? Welcome to my web portfolio",
+    "title": "I'm Vitorio A. Cavalheiro",
+    "subtitle": "Full Stack Developer",
+    "description": "I create amazing web experiences with modern technologies.",
+    "cta": "Come get to know me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Full Stack Developer & Data Engineer\n\nBuilding scalable systems that connect code, data, and real-world impact.\n\nI specialize in NestJS (Node.js) and Next.js, developing modular APIs and full-stack applications with a focus on performance, security, and clean architecture.\n\nSkilled in Python ETL pipelines, I design and automate data workflows that transform and integrate complex datasets — supporting analytics, automation, and decision-making.\n\nExperienced with PostgreSQL and MongoDB, and continuously exploring AWS and microservice architectures to build efficient, scalable, and reliable solutions.\n\nPassionate about transforming technical challenges into systems that deliver measurable results.",
+    "certifications": {
+      "title": "Certifications & Education",
+      "items": [
+        {
+          "name": "Security and Privacy by Design Foundations",
+          "issuer": "IBM",
+          "date": "Apr 2024",
+          "skills": "Python, Operating Systems, Computer Networks"
+        },
+        {
+          "name": "Docker Essentials: A Developer Introduction",
+          "issuer": "IBM",
+          "date": "Oct 2022",
+          "skills": "Docker, Python"
+        },
+        {
+          "name": "Basic Principles of Design",
+          "issuer": "IBM",
+          "date": "Aug 2021",
+          "skills": "Python"
+        },
+        {
+          "name": "Cybersecurity Fundamentals",
+          "issuer": "Senac AM",
+          "date": "Sep 2021",
+          "skills": "Operating Systems, Computer Networks"
+        },
+        {
+          "name": "Administration",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "Jan 2018",
+          "skills": ""
+        },
+        {
+          "name": "Notebook Assembly and Maintenance",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "Jul 2018",
+          "skills": "Operating Systems, Computer Networks"
+        },
+        {
+          "name": "PC Assembly and Maintenance",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "Jan 2017",
+          "skills": "Computer Networks"
+        },
+        {
+          "name": "Graphic Design",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "Jan 2016",
+          "skills": ""
+        },
+        {
+          "name": "Basic Computing II",
+          "issuer": "Centro de Capacitação Profissional do Adolescente",
+          "date": "Jan 2015",
+          "skills": "Operating Systems"
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "degree": "Associate Degree in Systems Analysis and Development",
+          "institution": "Anhanguera Educacional",
+          "period": "Feb 2025 - Jul 2027",
+          "skills": "Python, Computer Networks and more 4 skills"
+        },
+        {
+          "degree": "Technical Degree in Systems Development",
+          "institution": "ETEC Polivalente Americana",
+          "period": "2019 - 2021",
+          "skills": ""
+        }
+      ]
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "My professional journey and key roles.",
+    "items": {
+      "0": {
+        "title": "Full-stack Developer",
+        "company": "DMX Design e Desenvolvimento",
+        "period": "Aug 2025 - Present · 3 months",
+        "location": "Americana, São Paulo, Brazil · Hybrid",
+        "description": "Full Stack Developer at DMX Design, working on projects built with NestJS (Node.js) and React, applying best practices in architecture, security, and performance. Responsible for collaborating with clients throughout all development phases, conducting technical and functional reviews to ensure quality and continuous value delivery. Also experienced in data engineering, focusing on ETL processes in Python, pipeline automation, and the integration of socioeconomic data used in territorial analysis and strategic planning projects, including initiatives related to COP30.",
+        "skills": "ETL (Extract, Transform, Load), Python and more 7 skills"
+      },
+      "1": {
+        "title": "Application Developer",
+        "company": "IBM",
+        "period": "Jan 2024 - Sep 2024 · 9 months",
+        "location": "Hortolândia, São Paulo, Brazil · Hybrid",
+        "description": "I am currently part of the team responsible for the development and maintenance of ECR, a global contract repository widely adopted within the company. In my day-to-day work, I work on developing new features and resolving bugs in a web application built with Angular. In addition, I am involved in the creation and maintenance of microservices using Python and Node.js, ensuring the delivery of high-quality code through constant reviews. Stack and tools: - Frontend: Angular, JavaScript - Backend: Node.js/Express, Python/Flask - Testing: Automation with Selenium, manual testing - Database: MongoDB, SQL - DevOps and Infrastructure: Docker/Podman, Kubernetes, RedHat OpenShift - Version Control: Git, GitHub",
+        "skills": "Python, Selenium and more 14 skills"
+      },
+      "2": {
+        "title": "Intern",
+        "company": "IBM",
+        "period": "Jun 2022 - Jan 2024 · 1 year 8 months",
+        "location": "Hortolândia, São Paulo, Brazil",
+        "description": "I'm currently an intern on the team that develops and maintains ECR, a global contract repository used across the company. I help develop new features and fix bugs in a web application built with Angular. I also assist in creating and maintaining microservices using Python and Node.js, focusing on delivering high-quality code through regular reviews. Stack and tools: - Frontend: Angular, JavaScript - Backend: Node.js, Python/Flask - Testing: Selenium automation, manual testing - Database: MongoDB, SQL - DevOps and Infrastructure: Docker/Podman, Kubernetes, RedHat OpenShift - Version Control: Git, GitHub",
+        "skills": ""
+      }
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Here are some of the projects I've worked on."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Let's work together on your next project."
+  }
+}
