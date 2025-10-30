@@ -14,6 +14,7 @@ export function Navigation() {
   const router = useRouter();
   const params = useParams();
   const currentLocale = params.locale as string;
+  const [selectedLocale, setSelectedLocale] = useState(currentLocale);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
@@ -23,6 +24,10 @@ export function Navigation() {
     setTheme(initialTheme);
     document.documentElement.classList.add(initialTheme);
   }, []);
+
+  useEffect(() => {
+    setSelectedLocale(currentLocale);
+  }, [currentLocale]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -48,10 +53,15 @@ export function Navigation() {
   };
 
   const switchLanguage = (newLocale: string) => {
+    setSelectedLocale(newLocale);
     // Store language preference in localStorage
     localStorage.setItem('preferred-language', newLocale);
     // Dispatch custom event to notify other components
     window.dispatchEvent(new CustomEvent('languageChange', { detail: newLocale }));
+
+    // Navigate to the new locale
+    const newPath = pathname.replace(/^\/(en|pt)/, `/${newLocale}`);
+    router.push(newPath);
   };
 
   return (
@@ -83,29 +93,40 @@ export function Navigation() {
         </div>
 
         {/* Language Switcher and Theme Toggle - Desktop */}
-        <div className="hidden md:flex items-center space-x-1">
-          <button
-            onClick={() => switchLanguage('pt')}
-            className={cn(
-              "px-3 py-1.5 rounded text-xs font-bold transition-all duration-200",
-              currentLocale === 'pt'
-                ? "bg-[#263138] text-white shadow-sm"
-                : "text-muted-foreground hover:bg-muted/50"
-            )}
-          >
-            PT
-          </button>
-          <button
-            onClick={() => switchLanguage('en')}
-            className={cn(
-              "px-3 py-1.5 rounded text-xs font-bold transition-all duration-200",
-              currentLocale === 'en'
-                ? "bg-[#263138] text-white shadow-sm"
-                : "text-muted-foreground hover:bg-muted/50"
-            )}
-          >
-            EN
-          </button>
+        <div className="hidden md:flex items-center space-x-2">
+          <div className="relative flex items-center bg-muted/50 rounded-full p-1">
+            <button
+              onClick={() => switchLanguage('pt')}
+              className={cn(
+                "px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-200 relative z-10",
+                selectedLocale === 'pt'
+                  ? "text-background"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              PT
+            </button>
+            <button
+              onClick={() => switchLanguage('en')}
+              className={cn(
+                "px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-200 relative z-10",
+                selectedLocale === 'en'
+                  ? "text-background"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              EN
+            </button>
+            {/* Sliding indicator */}
+            <div
+              className={cn(
+                "absolute top-1 bottom-1 rounded-full transition-all duration-300 ease-in-out shadow-sm",
+                selectedLocale === 'pt'
+                  ? "left-1 right-1/2 bg-foreground"
+                  : "left-1/2 right-1 bg-foreground"
+              )}
+            />
+          </div>
           <button
             onClick={toggleTheme}
             className="p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors"
@@ -218,28 +239,39 @@ export function Navigation() {
               </button>
             ))}
             <div className="flex items-center space-x-4 pt-8">
-              <button
-                onClick={() => switchLanguage('pt')}
-                className={cn(
-                  "px-4 py-2 rounded text-sm font-bold transition-all duration-200",
-                  currentLocale === 'pt'
-                    ? "bg-[#263138] text-white shadow-sm"
-                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                )}
-              >
-                PT
-              </button>
-              <button
-                onClick={() => switchLanguage('en')}
-                className={cn(
-                  "px-4 py-2 rounded text-sm font-bold transition-all duration-200",
-                  currentLocale === 'en'
-                    ? "bg-[#263138] text-white shadow-sm"
-                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                )}
-              >
-                EN
-              </button>
+              <div className="relative flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+                <button
+                  onClick={() => switchLanguage('pt')}
+                  className={cn(
+                    "px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 relative z-10",
+                    selectedLocale === 'pt'
+                      ? "text-background"
+                      : "text-gray-600 dark:text-gray-300"
+                  )}
+                >
+                  PT
+                </button>
+                <button
+                  onClick={() => switchLanguage('en')}
+                  className={cn(
+                    "px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 relative z-10",
+                    selectedLocale === 'en'
+                      ? "text-background"
+                      : "text-gray-600 dark:text-gray-300"
+                  )}
+                >
+                  EN
+                </button>
+                {/* Sliding indicator */}
+                <div
+                  className={cn(
+                    "absolute top-1 bottom-1 rounded-full transition-all duration-300 ease-in-out shadow-sm",
+                    selectedLocale === 'pt'
+                      ? "left-1 right-1/2 bg-foreground"
+                      : "left-1/2 right-1 bg-foreground"
+                  )}
+                />
+              </div>
               <button
                 onClick={toggleTheme}
                 className="p-3 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
