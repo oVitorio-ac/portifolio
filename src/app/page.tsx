@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { Navigation } from '@/components/navigation';
+import { ThemeProvider } from '@/lib/theme-context';
 import HomePage from './(locale)/page';
 
 export default function RootPage() {
@@ -58,9 +59,11 @@ export default function RootPage() {
   }
 
   return (
-    <NextIntlClientProvider messages={messages} locale={currentLocale}>
-      <Navigation />
-      <HomePage />
-    </NextIntlClientProvider>
+    <ThemeProvider>
+      <NextIntlClientProvider messages={messages} locale={currentLocale}>
+        <Navigation />
+        <HomePage />
+      </NextIntlClientProvider>
+    </ThemeProvider>
   );
 }

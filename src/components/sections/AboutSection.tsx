@@ -1,12 +1,33 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function AboutSection() {
   const t = useTranslations();
   const [selectedCert, setSelectedCert] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    setTheme(initialTheme);
+
+    const handleThemeChange = () => {
+      const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+      setTheme(currentTheme);
+    };
+
+    const observer = new MutationObserver(handleThemeChange);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const openModal = (cert: any) => {
     setSelectedCert(cert);
@@ -137,11 +158,11 @@ export default function AboutSection() {
                 className="p-4 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
                 onClick={() => openModal(cert)}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#263138';
+                  e.currentTarget.style.backgroundColor = theme === 'dark' ? '#ffffff' : '#263138';
                   const allTextElements = e.currentTarget.querySelectorAll('*');
                   allTextElements.forEach(el => {
                     if (el instanceof HTMLElement) {
-                      el.style.color = 'white';
+                      el.style.color = theme === 'dark' ? '#000000' : 'white';
                     }
                   });
                 }}

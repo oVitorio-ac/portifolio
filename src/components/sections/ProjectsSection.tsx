@@ -51,8 +51,8 @@ export default function ProjectsSection() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-black text-left mb-12 fade-in-up">
           <div className="flex flex-col leading-tight">
-            <span className="text-[#263138] text-2xl md:text-3xl font-bold">Meus</span>
-            <span className="text-[#445964] text-4xl md:text-5xl font-black">Projetos</span>
+            <span className="text-foreground text-2xl md:text-3xl font-bold">Meus</span>
+            <span className="text-foreground text-4xl md:text-5xl font-black">Projetos</span>
           </div>
         </h2>
         <p className="text-lg text-muted-foreground text-left mb-8 fade-in-up">
@@ -67,10 +67,10 @@ export default function ProjectsSection() {
               onClick={() => setSelectedLanguage(language)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedLanguage === language
-                  ? 'text-white shadow-lg'
+                  ? 'text-background shadow-lg'
                   : 'bg-background text-muted-foreground hover:bg-muted hover:text-foreground'
               }`}
-              style={selectedLanguage === language ? { backgroundColor: '#263138' } : {}}
+              style={selectedLanguage === language ? { backgroundColor: 'var(--foreground)' } : {}}
             >
               {language}
             </button>
